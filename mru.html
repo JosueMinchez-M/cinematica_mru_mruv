@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_mru.css">
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Movimiento Rectilíneo Uniforme (MRU)</title>
+</head>
+
+<body>
+    <h1>Movimiento Rectilíneo Uniforme (MRU)</h1>
+    <p>El Movimiento Rectilíneo Uniforme (MRU) es un tipo de movimiento en el cual un objeto se desplaza en línea recta con una velocidad constante, es decir, recorre distancias iguales en tiempos iguales. Este movimiento se caracteriza por no tener aceleración, lo que significa que la velocidad del objeto no cambia con el tiempo.</p>
+    <div class="image-container">
+        <img src="img/movimiento_rectilineo_uniforme.jpg" alt="Gráfico del MRU">
+    </div>
+
+    <h2>Características del MRU</h2>
+    <ul>
+        <li>La trayectoria es una línea recta.</li>
+        <li>La velocidad es constante en magnitud y dirección.</li>
+        <li>No hay aceleración, es decir, la aceleración es igual a cero.</li>
+    </ul>
+
+    <h2>Fórmulas del MRU</h2>
+    <p>En el MRU, la relación entre la distancia recorrida, la velocidad y el tiempo se expresa mediante la siguiente fórmula:</p>
+    <div class="formula">
+        <p><strong>Fórmula general:</strong></p>
+        <p>\( d = v \cdot t \)</p>
+        <p>donde:</p>
+        <ul>
+            <li><strong>d</strong>: distancia recorrida (en metros)</li>
+            <li><strong>v</strong>: velocidad constante (en metros/segundo)</li>
+            <li><strong>t</strong>: tiempo transcurrido (en segundos)</li>
+        </ul>
+    </div>
+
+    <h2>Despejes de la fórmula</h2>
+    <p>Para calcular cualquiera de las tres variables (distancia, velocidad o tiempo), se pueden utilizar los siguientes despejes:</p>
+    <div class="formula">
+        <p><strong>Para calcular la distancia:</strong></p>
+        <p>\( d = v \cdot t \)</p>
+    </div>
+    <div class="formula">
+        <p><strong>Para calcular la velocidad:</strong></p>
+        <p>\( v = \frac{d}{t} \)</p>
+    </div>
+    <div class="formula">
+        <p><strong>Para calcular el tiempo:</strong></p>
+        <p>\( t = \frac{d}{v} \)</p>
+    </div>
+    <hr>
+    <h2>Representación gráfica del MRU</h2>
+    <p>La gráfica <b>posición-tiempo (x-t)</b>, la distancia recorrida es directamente proporcional al tiempo transcurrido. La pendiente de la recta representa la velocidad constante del movimiento.</p>
+
+    <div class="image-container">
+        <img src="img/grafica_dt_mru.png" alt="Gráfico del MRU">
+        <p>Figura 1: Gráfico de distancia vs. tiempo en el MRU</p>
+    </div>
+
+    <p>La gráfica <b>velocidad-tiempo (v-t)</b> de un movimiento rectilíneo uniforme (m.r.u.) muestra que la velocidad permanece constante a lo largo del tiempo.</p>
+
+    <div class="image-container">
+        <img src="img/grafica_vt_mru.png" alt="Gráfico del MRU">
+        <p>Figura 2: Gráfico de velocidad vs. tiempo en el MRU</p>
+    </div>
+
+    <p>La gráfica <b>aceleración-tiempo (a-t)</b> indica que la aceleración es igual a cero, ya que no existe ningún cambio de velocidad.</p>
+    <div class="image-container">
+        <img src="img/grafica_at_mru.png" alt="Gráfico del MRU">
+        <p>Figura 3: Gráfico de aceleración vs. tiempo en el MRU</p>
+    </div>
+
+    <h2>Calculadora de MRU</h2>
+    <div class="calculadora-resultado">
+        <div class="calculadora">
+            <div class="form-group">
+                <label for="tipo-calculo">Seleccione el tipo de cálculo:</label>
+                <select id="tipo-calculo" onchange="mostrarCampos()">
+                    <option value="velocidad">Calcular Velocidad</option>
+                    <option value="distancia">Calcular Distancia</option>
+                    <option value="tiempo">Calcular Tiempo</option>
+                </select>
+            </div>
+            <div class="form-group" id="campo-distancia">
+                <label for="distancia">Distancia (metros):</label>
+                <input type="number" id="distancia" placeholder="Introduce la distancia">
+            </div>
+            <div class="form-group" id="campo-velocidad">
+                <label for="velocidad">Velocidad (m/s):</label>
+                <input type="number" id="velocidad" placeholder="Introduce la velocidad">
+            </div>
+            <div class="form-group" id="campo-tiempo">
+                <label for="tiempo">Tiempo (segundos):</label>
+                <input type="number" id="tiempo" placeholder="Introduce el tiempo">
+            </div>
+            <button onclick="calcular()">Calcular</button>
+            <button onclick="resetearCampos()">Limpiar Campos</button>
+        </div>
+
+        <div class="resultado-container">
+            <h1>Resultado</h1>
+            <div id="resultado-vf">
+                <p id="resultado">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script_mru.js"></script>
+</body>
+
+</html>

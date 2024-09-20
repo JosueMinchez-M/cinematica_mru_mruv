@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Física</title>
+    <link rel="stylesheet" href="css/styles_index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="" class="navbar-link" onclick="loadContent('home.html')">Home</a>
+            <a href="#" class="navbar-link" onclick="loadContent('mru.html')">Movimiento Rectilíneo Uniforme</a>
+            <a href="#" class="navbar-link" onclick="loadContent('mruv.html')">Movimiento Rectilíneo Uniformemente Variado</a>
+        </nav>
+    </header>
+    
+    <main>
+        <iframe id="content-frame" scrolling="no" src="home.html" frameborder="0"></iframe>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p><span class="footer-icon">🎓</span>Carnet: <strong>2290-21-18482</strong></p>
+                <p><span class="footer-icon">👤</span>Estudiante: <strong>Josué David Mínchez Monzón</strong></p>
+                <p><span class="footer-icon">📚</span>Curso: <strong>Desarrollo Web</strong></p>
+            </div>
+            <div class="footer-info">
+                <p><span class="footer-icon">📅</span>Semestre: <strong>8vo</strong></p>
+                <p><span class="footer-icon">🎓</span>Carrera: <strong>Ingeniería en Sistemas de Información y Ciencias de la Computación</strong></p>
+                <p><span class="footer-icon">📍</span>Sede: <strong>UMG Sololá</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script_index.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles_mruv.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Movimiento Rectilíneo Uniformemente Variado (MRUV)</title>
+</head>
+<body>
+    <h1>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h1>
+    <p>El Movimiento Rectilíneo Uniformemente Variado (MRUV) es un tipo de movimiento en el cual un objeto se desplaza en línea recta, pero su velocidad no es constante. La velocidad cambia de manera uniforme a lo largo del tiempo debido a la aceleración constante.</p>
+
+    <div class="image-container">
+        <img src="img/ejemplo1_mruv.png" alt="Gráfico del MRUV">
+        <p>Figura 1: Representación gráfica del MRUV</p>
+    </div>
+
+    <h2>Características del MRUV</h2>
+    <ul>
+        <li>La trayectoria es una línea recta.</li>
+        <li>La velocidad cambia de manera uniforme.</li>
+        <li>La aceleración es constante en magnitud y dirección.</li>
+    </ul>
+
+    <h2>Fórmulas del MRUV</h2>
+    <p>Las siguientes fórmulas relacionan la velocidad, la aceleración, el tiempo y la distancia recorrida:</p>
+    
+    <div class="formula">
+        <p><strong>Velocidad final:</strong></p>
+        <p>\( v_f = v_i + a \cdot t \)</p>
+        <ul>
+            <li><strong>v_f</strong>: velocidad final (m/s)</li>
+            <li><strong>v_i</strong>: velocidad inicial (m/s)</li>
+            <li><strong>a</strong>: aceleración (m/s<sup>2</sup>)</li>
+            <li><strong>t</strong>: tiempo (s)</li>
+        </ul>
+    </div>
+
+    <div class="formula">
+        <p><strong>Distancia recorrida:</strong></p>
+        <p>\( d = v_i \cdot t + \frac{1}{2} a \cdot t^2 \)</p>
+        <ul>
+            <li><strong>d</strong>: distancia (m)</li>
+            <li><strong>v_i</strong>: velocidad inicial (m/s)</li>
+            <li><strong>a</strong>: aceleración (m/s<sup>2</sup>)</li>
+            <li><strong>t</strong>: tiempo (s)</li>
+        </ul>
+    </div>
+
+    <div class="formula">
+        <p><strong>Velocidad final al cuadrado:</strong></p>
+        <p>\( v_f^2 = v_i^2 + 2 \cdot a \cdot d \)</p>
+        <ul>
+            <li><strong>v_f</strong>: velocidad final (m/s)</li>
+            <li><strong>v_i</strong>: velocidad inicial (m/s)</li>
+            <li><strong>a</strong>: aceleración (m/s<sup>2</sup>)</li>
+            <li><strong>d</strong>: distancia (m)</li>
+        </ul>
+    </div>
+
+    <div class="formula">
+        <p><strong>Fórmula del tiempo:</strong></p>
+        <p>\( t = \frac{v_f - v_i}{a} \)</p>
+        <ul>
+            <li><strong>t</strong>: tiempo (s)</li>
+            <li><strong>v<sub>f</sub></strong>: velocidad final (m/s)</li>
+            <li><strong>v<sub>i</sub></strong>: velocidad inicial (m/s)</li>
+            <li><strong>a</strong>: aceleración (m/s<sup>2</sup>)</li>
+        </ul>
+    </div>
+
+    <h2>Representación gráfica del MRUV</h2>
+    <p>Las gráficas del MRUV muestran cómo varían la velocidad, la aceleración y la posición a lo largo del tiempo:</p>
+    
+    <div class="image-container">
+        <img src="img/grafica_vt_mruv.png" alt="Gráfico de velocidad vs. tiempo en el MRUV">
+        <p>Figura 2: Gráfico de velocidad vs. tiempo en el MRUV</p>
+    </div>
+
+    <div class="image-container">
+        <img src="img/grafica_at_mruv.png" alt="Gráfico de aceleración vs. tiempo en el MRUV">
+        <p>Figura 3: Gráfico de aceleración vs. tiempo en el MRUV</p>
+    </div>
+
+    <div class="image-container">
+        <img src="img/grafica_dt_mruv.png" alt="Gráfico de posición vs. tiempo en el MRUV">
+        <p>Figura 4: Gráfico de posición vs. tiempo en el MRUV</p>
+    </div>
+
+    <hr>
+    <h1>Calculadora de MRUV</h1>
+    <div class="calculator-container">
+
+        <div class="formula-section" id="velocidad-final">
+            <h2>Calcular Velocidad Final (v<sub>f</sub>)</h2>
+            <label for="vi">Velocidad Inicial (v<sub>i</sub>):</label>
+            <input type="number" id="vi" step="any" placeholder="m/s">
+            <label for="a">Aceleración (a):</label>
+            <input type="number" id="a" step="any" placeholder="m/s²">
+            <label for="t">Tiempo (t):</label>
+            <input type="number" id="t" step="any" placeholder="s">
+            <button onclick="calcularVelocidadFinal()">Calcular</button>
+            <button onclick="limpiarVelocidadFinal()">Limpiar Campos</button> <!-- Botón de limpiar -->
+            <div class="result" id="resultado-velocidad-final">-</div>
+        </div>
+
+        <div class="formula-section" id="distancia-recorrida">
+            <h2>Calcular Distancia Recorrida (d)</h2>
+            <label for="vi-distancia">Velocidad Inicial (v<sub>i</sub>):</label>
+            <input type="number" id="vi-distancia" step="any" placeholder="m/s">
+            <label for="a-distancia">Aceleración (a):</label>
+            <input type="number" id="a-distancia" step="any" placeholder="m/s²">
+            <label for="t-distancia">Tiempo (t):</label>
+            <input type="number" id="t-distancia" step="any" placeholder="s">
+            <button onclick="calcularDistanciaRecorrida()">Calcular</button>
+            <button onclick="limpiarDistanciaRecorrida()">Limpiar Campos</button> <!-- Botón de limpiar -->
+            <div class="result" id="resultado-distancia">-</div>
+        </div>
+
+        <div class="formula-section" id="velocidad-inicial">
+            <h2>Calcular Velocidad Inicial (v<sub>i</sub>)</h2>
+            <label for="vf">Velocidad Final (v<sub>f</sub>):</label>
+            <input type="number" id="vf" step="any" placeholder="m/s">
+            <label for="a-vi">Aceleración (a):</label>
+            <input type="number" id="a-vi" step="any" placeholder="m/s²">
+            <label for="t-vi">Tiempo (t):</label>
+            <input type="number" id="t-vi" step="any" placeholder="s">
+            <button onclick="calcularVelocidadInicial()">Calcular</button>
+            <button onclick="limpiarVelocidadInicial()">Limpiar Campos</button> <!-- Botón de limpiar -->
+            <div class="result" id="resultado-velocidad-inicial">-</div>
+        </div>
+
+        <div class="formula-section" id="tiempo">
+            <h2>Calcular Tiempo (t)</h2>
+            <label for="vi-tiempo">Velocidad Inicial (v<sub>i</sub>):</label>
+            <input type="number" id="vi-tiempo" step="any" placeholder="m/s">
+            <label for="vf-tiempo">Velocidad Final (v<sub>f</sub>):</label>
+            <input type="number" id="vf-tiempo" step="any" placeholder="m/s">
+            <label for="a-tiempo">Aceleración (a):</label>
+            <input type="number" id="a-tiempo" step="any" placeholder="m/s²">
+            <button onclick="calcularTiempo()">Calcular</button>
+            <button onclick="limpiarTiempo()">Limpiar Campos</button> <!-- Botón de limpiar -->
+            <div class="result" id="resultado-tiempo">-</div>
+        </div>
+
+    </div>
+
+    <script src="js/script_mruv.js"></script>
+</body>
+</html>
